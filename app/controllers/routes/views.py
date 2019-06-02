@@ -73,6 +73,11 @@ def faq():
     form_login = LoginForm(request.form)
     return render_template('views/faq.html', title='FAQ', form_login=form_login)
 
+@views.route('/contato', methods=["GET", "POST"])
+def contato():
+    form_login = LoginForm(request.form)
+    return render_template('views/contato.html', title='Contato', form_login=form_login)
+
 @views.route('/teste', methods=["GET","POST"])
 def teste():
     form_login = LoginForm(request.form)
